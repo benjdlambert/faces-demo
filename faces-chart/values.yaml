@@ -4,7 +4,7 @@
 
 # Default image tag. This is used only if images aren't set in the sections
 # below.
-defaultImageTag: ""             # If not set, uses the appVersion
+defaultImageTag: "" # If not set, uses the appVersion
 
 # Default imagePullPolicy. This is used only if not set in the sections below.
 defaultImagePullPolicy: IfNotPresent
@@ -13,30 +13,30 @@ defaultImagePullPolicy: IfNotPresent
 authHeader: "X-Faces-User"
 
 gui:
-  image: ""                     # If set, overrides the imageName/imageTag pair
-  imageName: ghcr.io/buoyantio/faces-gui
-  imageTag: ""                  # If not set, uses the defaultImageTag
-  imagePullPolicy: ""           # If not set, uses the default imagePullPolicy
-  serviceType: ClusterIP        # Override with LoadBalancer or NodePort if desired
+  image: "" # If set, overrides the imageName/imageTag pair
+  imageName: ghcr.io/benjdlambert/faces-gui
+  imageTag: "" # If not set, uses the defaultImageTag
+  imagePullPolicy: "" # If not set, uses the default imagePullPolicy
+  serviceType: ClusterIP # Override with LoadBalancer or NodePort if desired
 
 face:
-  image: ""                     # If set, overrides the imageName/imageTag pair
-  imageName: ghcr.io/buoyantio/faces-workload
-  imageTag: ""                  # If not set, uses the defaultImageTag
-  imagePullPolicy: ""           # If not set, uses the default imagePullPolicy
+  image: "" # If set, overrides the imageName/imageTag pair
+  imageName: ghcr.io/benjdlambert/faces-workload
+  imageTag: "" # If not set, uses the defaultImageTag
+  imagePullPolicy: "" # If not set, uses the default imagePullPolicy
   errorFraction: "20"
   delayBuckets: ""
 
 backend:
-  image: ""                     # If set, overrides the imageName/imageTag pair
-  imageName: ghcr.io/buoyantio/faces-workload
-  imageTag: ""                  # If not set, uses the defaultImageTag
-  imagePullPolicy: ""           # If not set, uses the default imagePullPolicy
+  image: "" # If set, overrides the imageName/imageTag pair
+  imageName: ghcr.io/benjdlambert/faces-workload
+  imageTag: "" # If not set, uses the defaultImageTag
+  imagePullPolicy: "" # If not set, uses the default imagePullPolicy
   errorFraction: "20"
   delayBuckets: "0,5,10,15,20,50,200,500,1500"
 
 smiley:
-  smiley: ""                    # Override if desired
+  smiley: "" # Override if desired
   # image: ""                     # If set, overrides the imageName/imageTag pair
   # imageName: ""                 # If not set, uses backend.imageName
   # imageTag: ""                  # If not set, uses backend.imageTag
@@ -45,8 +45,8 @@ smiley:
   # delayBuckets: ""              # If not set, uses backend.delayBuckets
 
 smiley2:
-  enabled: False                # If set to True, enables the second smiley workload
-  smiley: "HeartEyes"           # Override if desired
+  enabled: False # If set to True, enables the second smiley workload
+  smiley: "HeartEyes" # Override if desired
   # image: ""                     # If set, overrides the imageName/imageTag pair
   # imageName: ""                 # If not set, uses backend.imageName
   # imageTag: ""                  # If not set, uses backend.imageTag
@@ -55,7 +55,7 @@ smiley2:
   # delayBuckets: ""              # If not set, uses backend.delayBuckets
 
 color:
-  color: ""                     # Override if desired, defaults to colorblind-friendly light blue from the Tol palette
+  color: "" # Override if desired, defaults to colorblind-friendly light blue from the Tol palette
   # image: ""                     # If set, overrides the imageName/imageTag pair
   # imageName: ""                 # If not set, uses backend.imageName
   # imageTag: ""                  # If not set, uses backend.imageTag
@@ -64,8 +64,8 @@ color:
   # delayBuckets: ""              # If not set, uses backend.delayBuckets
 
 color2:
-  enabled: False                # If set to True, enables the second color workload
-  color: "green"                # Override if desired, defaults to colorblind-friendly green from the Tol palette
+  enabled: False # If set to True, enables the second color workload
+  color: "green" # Override if desired, defaults to colorblind-friendly green from the Tol palette
   # image: ""                     # If set, overrides the imageName/imageTag pair
   # imageName: ""                 # If not set, uses backend.imageName
   # imageTag: ""                  # If not set, uses backend.imageTag
