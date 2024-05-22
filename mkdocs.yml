@@ -1,0 +1,6 @@
+site_name: faces
+site_description: Docs on the Faces ecosystem
+plugins:
+  - techdocs-core
+nav:
+  - Getting Started: index.md
